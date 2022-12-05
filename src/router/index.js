@@ -1,12 +1,19 @@
-import { createRouter, createWebHistory } from "vue-router";
-import HomeView from "../views/HomeView.vue";
+import { createRouter, createMemoryHistory } from "vue-router";
+import LagerView from "@/views/LagerView.vue";
+import AboutView from "@/views/AboutView.vue";
 
 const routes = [
   {
     path: "/",
-    name: "home",
-    component: HomeView,
+    name: "About",
+    component: AboutView,
   },
+  {
+    path: "/lager",
+    name: "Lager",
+    component: LagerView,
+  },
+  /*
   {
     path: "/about",
     name: "about",
@@ -14,12 +21,13 @@ const routes = [
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     component: () =>
-      import(/* webpackChunkName: "about" */ "../views/AboutView.vue"),
+      import(/* webpackChunkName: "about" *'/ "../views/AboutView.vue"),
   },
+*/
 ];
 
 const router = createRouter({
-  history: createWebHistory(process.env.BASE_URL),
+  history: createMemoryHistory(),
   routes,
 });
 

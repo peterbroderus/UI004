@@ -1,12 +1,26 @@
 <template>
   <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+    <router-link to="/">About |</router-link>
+    <router-link to="/lager"> Lager</router-link>
   </nav>
   <router-view />
 </template>
 
+<script>
+/*
+import StartUp from "@/components/StartUp.vue";
+
+export default {
+  components: {
+    StartUp,
+  },
+};
+*/
+</script>
+
 <style lang="scss">
+@import "./styles/style.scss";
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
