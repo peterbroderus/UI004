@@ -1,64 +1,6 @@
 <template>
   <header class="header">
     <div class="container">
-      <div
-        class="sliders"
-        v-for="lagerN in $store.state.lager.lagerList"
-        :key="lagerN.id"
-      >
-        <button
-          class="btn-default red"
-          :class="{
-            green: $store.state.lager.lagerList[lagerN.id].power,
-          }"
-          @click="setPower({ id: lagerN.id, power: true })"
-        >
-          On
-        </button>
-        <button
-          class="btn-default red"
-          :class="{
-            green: $store.state.lager.lagerList[lagerN.id].mediaplayer_1,
-          }"
-          @click="setPlayer1({ id: lagerN.id, mediaplayer_1: true })"
-        >
-          1
-        </button>
-        <button
-          class="btn-default red"
-          :class="{
-            green: $store.state.lager.lagerList[lagerN.id].mediaplayer_2,
-          }"
-          @click="setPlayer2({ id: lagerN.id, mediaplayer_2: false })"
-        >
-          2
-        </button>
-        <v-slider
-          step="1"
-          density="comfortable"
-          thumb-label
-          color="orange"
-          label="{{lagerN.name}}"
-          direction="vertical"
-        />
-      </div>
-    </div>
-  </header>
-</template>
-<script>
-import { mapMutations } from "vuex";
-
-export default {
-  methods: {
-    ...mapMutations("lager", ["setPower"]),
-  },
-};
-</script>
-
-<!--
-<template>
-  <header class="header">
-    <div class="container">
       <div class="sliders">
         <button class="btn-default red">ON</button>
         <button class="btn-default red">1</button>
@@ -149,4 +91,3 @@ export default {
     </div>
   </header>
 </template>
--->
