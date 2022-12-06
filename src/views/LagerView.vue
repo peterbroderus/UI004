@@ -9,7 +9,7 @@
           ><v-btn className="btn-default green">1</v-btn
           ><v-btn className="btn-default">2</v-btn></v-sheet
         >
-        <v-card className="#app" :elevation="0" width="150px"
+        <v-card className="sliderbox" :elevation="0"
           ><v-slider
             step="1"
             density="comfortable"
@@ -24,7 +24,7 @@
           ><v-btn className="btn-default green">1</v-btn
           ><v-btn className="btn-default">2</v-btn></v-sheet
         >
-        <v-card className="#app" :elevation="0" width="150px"
+        <v-card className="sliderbox" :elevation="0"
           ><v-slider
             step="1"
             density="comfortable"
@@ -39,7 +39,7 @@
           ><v-btn className="btn-default green">1</v-btn
           ><v-btn className="btn-default">2</v-btn></v-sheet
         >
-        <v-card className="#app" :elevation="0" width="150px"
+        <v-card className="sliderbox" :elevation="0"
           ><v-slider
             step="1"
             density="comfortable"
@@ -54,7 +54,7 @@
           ><v-btn className="btn-default green">1</v-btn
           ><v-btn className="btn-default">2</v-btn></v-sheet
         >
-        <v-card className="#app" :elevation="0" width="150px"
+        <v-card className="sliderbox" :elevation="0"
           ><v-slider
             step="1"
             density="comfortable"
@@ -69,7 +69,7 @@
           ><v-btn className="btn-default green">1</v-btn
           ><v-btn className="btn-default">2</v-btn></v-sheet
         >
-        <v-card className="#app" :elevation="0" width="150px"
+        <v-card className="sliderbox" :elevation="0"
           ><v-slider
             step="1"
             density="comfortable"
@@ -84,7 +84,7 @@
           ><v-btn className="btn-default green">1</v-btn
           ><v-btn className="btn-default">2</v-btn></v-sheet
         >
-        <v-card className="#app" :elevation="0" width="150px"
+        <v-card className="sliderbox" :elevation="0"
           ><v-slider
             step="1"
             density="comfortable"

@@ -1,5 +1,5 @@
 import { createRouter, createMemoryHistory } from "vue-router";
-import LagerView from "@/views/LagerView.vue";
+import LagerView from "@/views/LagerView2.vue";
 import AboutView from "@/views/AboutView.vue";
 
 const routes = [

@@ -1,21 +1,19 @@
 <template>
   <nav>
-    <router-link to="/">About |</router-link>
-    <router-link to="/lager"> Lager</router-link>
+    <router-link to="/">Start | </router-link>
+    <router-link to="/lager">Lager</router-link>
   </nav>
   <router-view />
 </template>
 
 <script>
-/*
-import StartUp from "@/components/StartUp.vue";
+/*import StartUp from "@/components/StartUp.vue";
 
 export default {
   components: {
     StartUp,
   },
-};
-*/
+};*/
 </script>
 
 <style lang="scss">
@@ -30,7 +28,7 @@ export default {
 }
 
 nav {
-  padding: 30px;
+  padding: 20px;
 
   a {
     font-weight: bold;
