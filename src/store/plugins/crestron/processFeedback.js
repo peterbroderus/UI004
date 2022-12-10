@@ -15,7 +15,7 @@ let feedbackJoins = {
         // to true.
         if (boolValue) {
           store.commit("lager/setPowerFeedback", {
-            id: "lagerSlider_1",
+            id: "lagerSlide_1",
             power: true,
           });
         }
@@ -29,8 +29,8 @@ let feedbackJoins = {
         // use a single join for this, and commit on high and low.
         if (boolValue) {
           store.commit("lager/setPowerFeedback", {
-            id: "display_1",
-            power: false,
+            id: "lagerSlide_2",
+            power: true,
           });
         }
       },
@@ -42,13 +42,13 @@ let feedbackJoins = {
         // is used for power state, instead of one join for power on and another join
         // for power off
         if (boolValue) {
-          store.commit("displays/setPowerFeedback", {
-            id: "display_2",
+          store.commit("lager/setPowerFeedback", {
+            id: "lagerSlide_2",
             power: true,
           });
         } else {
-          store.commit("displays/setPowerFeedback", {
-            id: "display_2",
+          store.commit("lager/setPowerFeedback", {
+            id: "lagerSlide_2",
             power: false,
           });
         }

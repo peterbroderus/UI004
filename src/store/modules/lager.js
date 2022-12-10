@@ -3,8 +3,8 @@ const lager = {
   namespaced: true,
   state() {
     return {
-      lagerList: {
-        slider_1: {
+      lagerList: [
+        {
           id: "lagerSlide_1",
           name: "Utleverans",
           power: false,
@@ -12,7 +12,7 @@ const lager = {
           mediaplayer_2: true,
           slider: 0,
         },
-        slider_2: {
+        {
           id: "lagerSlide_2",
           name: "Retur",
           power: false,
@@ -20,7 +20,7 @@ const lager = {
           mediaplayer_2: true,
           slider: 0,
         },
-        slider_3: {
+        {
           id: "lagerSlide_3",
           name: "Pack",
           power: false,
@@ -28,7 +28,7 @@ const lager = {
           mediaplayer_2: true,
           slider: 0,
         },
-        slider_4: {
+        {
           id: "lagerSlide_4",
           name: "Inleverans",
           power: false,
@@ -36,7 +36,7 @@ const lager = {
           mediaplayer_2: true,
           slider: 0,
         },
-        slider_5: {
+        {
           id: "lagerSlide_5",
           name: "Lager Nya",
           power: false,
@@ -44,7 +44,7 @@ const lager = {
           mediaplayer_2: true,
           slider: 0,
         },
-        slider_6: {
+        {
           id: "lagerSlide_6",
           name: "Lager Kontor",
           power: false,
@@ -52,7 +52,7 @@ const lager = {
           mediaplayer_2: true,
           slider: 0,
         },
-      },
+      ],
     };
   },
   mutations: {
@@ -61,6 +61,12 @@ const lager = {
     },
     setPower(state, { id, power }) {
       // Empty mutation for Vuex
+    },
+    setPlayer1(state, { id, mediaplayer_1 }) {
+      //
+    },
+    setPlayer2(state, { id, mediaplayer_2 }) {
+      //
     },
   },
   actions: {},

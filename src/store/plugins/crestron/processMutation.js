@@ -17,16 +17,6 @@ export default function processMutation(store, mutation) {
   // commands that need to be sent back to the system.  Consider carefully how
   // you structure your code to minimize code bloat in this function.
   switch (mutation.type) {
-    case "counter/incrementCounter": {
-      // Pulse join 1 to increment the counter
-      pulse(1);
-      break;
-    }
-    case "counter/decrementCounter": {
-      /// Pulse join 2 to decrement the counter
-      pulse(2);
-      break;
-    }
     case "lager/setPower": {
       // The mutation payload is a single object that uses destructuring
       // to include however many properties you need.  The payload for the
@@ -35,16 +25,12 @@ export default function processMutation(store, mutation) {
         case "lagerSlide_1": {
           if (mutation.payload.power) {
             pulse(11);
-          } else {
-            pulse(12);
           }
           break;
         }
         case "lagerSlide_2": {
           if (mutation.payload.power) {
-            pulse(13);
-          } else {
-            pulse(14);
+            pulse(12);
           }
           break;
         }

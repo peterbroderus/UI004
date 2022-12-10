@@ -5,6 +5,11 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
+    "build:archive:dev": "vue-cli-service build --mode development && ch5-cli archive -p tsw1070 -d dist -o tsw",
+    "build:archive:prod": "vue-cli-service build && ch5-cli archive -p tsw1070 -d dist -o tsw",
+    "deploy": "ch5-cli deploy -H 192.168.0.212 -p -t touchscreen tsw/tsw1070.ch5z",
+    "onestep:dev": "npm run build:archive:dev && npm run deploy",
+    "onestep:prod": "npm run build:archive:prod && npm run deploy",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
