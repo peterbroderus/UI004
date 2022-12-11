@@ -9,11 +9,13 @@ let feedbackJoins = {
     {
       join: 11,
       callback: function (store, boolValue) {
+        console.log("Power FB " + boolValue);
         // The callback function is called anytime the digital signal changes,
         // whether it's going to high or to low.  In this particular callback,
         // The value is only checked when it is high, to set the power on feedback
         // to true.
         if (boolValue) {
+          console.log("Set to green " + boolValue);
           store.commit("lager/setPowerFeedback", {
             id: "lagerSlide_1",
             power: true,
