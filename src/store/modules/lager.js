@@ -6,7 +6,7 @@ const lager = {
       lagerList: [
         {
           id: "lagerSlide_1",
-          name: "Utleverans",
+          name: "Test 1",
           power: false,
           mediaplayer_1: false,
           mediaplayer_2: true,
@@ -14,7 +14,7 @@ const lager = {
         },
         {
           id: "lagerSlide_2",
-          name: "Retur",
+          name: "Test 2",
           power: false,
           mediaplayer_1: false,
           mediaplayer_2: true,
@@ -22,7 +22,7 @@ const lager = {
         },
         {
           id: "lagerSlide_3",
-          name: "Pack",
+          name: "Test 3",
           power: false,
           mediaplayer_1: false,
           mediaplayer_2: true,
@@ -30,7 +30,7 @@ const lager = {
         },
         {
           id: "lagerSlide_4",
-          name: "Inleverans",
+          name: "Test 4",
           power: false,
           mediaplayer_1: false,
           mediaplayer_2: true,
@@ -38,7 +38,7 @@ const lager = {
         },
         {
           id: "lagerSlide_5",
-          name: "Lager Nya",
+          name: "Test 5",
           power: false,
           mediaplayer_1: false,
           mediaplayer_2: true,
@@ -46,7 +46,7 @@ const lager = {
         },
         {
           id: "lagerSlide_6",
-          name: "Lager Kontor",
+          name: "Test 6",
           power: false,
           mediaplayer_1: false,
           mediaplayer_2: true,
@@ -69,7 +69,11 @@ const lager = {
       //
     },
   },
-  actions: {},
+  actions: {
+    setSlider(state, { id, slider }) {
+      console.log("setSlider");
+    },
+  },
   getters: {},
 };
 

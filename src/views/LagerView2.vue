@@ -8,7 +8,7 @@
           :key="lager.id"
         >
           <button
-            class="btn-default"
+            class="btn-default red"
             :class="{
               green: lager.power,
             }"
@@ -35,6 +35,7 @@
             2
           </button>
           <v-slider
+            v-model="lager.slider"
             step="1"
             density="comfortable"
             thumb-label
@@ -42,6 +43,7 @@
             :label="lager.name"
             direction="vertical"
           />
+          <p>{{ lager.slider || 0 }}</p>
         </div>
         <section class="section">
           <div>
@@ -60,10 +62,18 @@
 import { mapMutations } from "vuex";
 
 export default {
+  data: () => ({
+    //
+  }),
   methods: {
     ...mapMutations("lager", ["setPower"]),
     ...mapMutations("lager", ["setPlayer1"]),
     ...mapMutations("lager", ["setPlayer2"]),
+  },
+  computed: {
+    sliderValue() {
+      return this.lager.slider;
+    },
   },
 };
 </script>
