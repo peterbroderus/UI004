@@ -2,7 +2,7 @@
   <v-app>
     <v-app-bar :elevation="8">
       <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
-      <v-app-bar-title>Hossmo</v-app-bar-title>
+      <v-app-bar-title>title</v-app-bar-title>
     </v-app-bar>
     <v-navigation-drawer v-model="drawer" absolute temporary>
       <v-list nav dense>
