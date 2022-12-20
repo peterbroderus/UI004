@@ -70,10 +70,6 @@ export default {
     ...mapMutations("lager", ["setPlayer1"]),
     ...mapMutations("lager", ["setPlayer2"]),
   },
-  computed: {
-    sliderValue() {
-      return this.lager.slider;
-    },
-  },
+  computed: {},
 };
 </script>
