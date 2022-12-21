@@ -60,7 +60,7 @@ const lager = {
       state.lagerList[id].power = power;
     },
     setPower(state, { id, power }) {
-      // Empty mutation for Vuex
+      state.lagerList.filter((x) => x.id === id)[0].power = power;
     },
     setPlayer1(state, { id, mediaplayer_1 }) {
       //
@@ -73,8 +73,15 @@ const lager = {
     setSlider(state, { id, slider }) {
       console.log("setSlider");
     },
+    setPowerByAction(context, { id, power }) {
+      context.commit("setPower", { id, power });
+    },
   },
-  getters: {},
+  getters: {
+    getLager(state) {
+      return state.lagerList;
+    },
+  },
 };
 
 export default lager;

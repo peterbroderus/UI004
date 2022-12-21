@@ -2,17 +2,11 @@
   <header class="header">
     <v-app>
       <div id="lager" class="container">
-        <div
-          class="sliders"
-          v-for="lager in $store.state.lager.lagerList"
-          :key="lager.id"
-        >
+        <div class="sliders" v-for="lager in lagerList" :key="lager.id">
           <button
-            class="btn-default red"
-            :class="{
-              green: lager.power,
-            }"
-            @click="setPower({ id: lager.id, power: true })"
+            class="btn-default"
+            :class="[lager.power ? 'green' : 'red']"
+            @click="setPowerByAction({ id: lager.id, power: !lager.power })"
           >
             On
           </button>
@@ -59,13 +53,22 @@
   </header>
 </template>
 <script>
-import { mapMutations } from "vuex";
+import { mapActions, mapGetters, mapMutations } from "vuex";
 
 export default {
   data: () => ({
-    //
+    lagerList: [],
   }),
+  mounted() {
+    this.lagerList = this.getLager();
+  },
   methods: {
+    ...mapActions({
+      setPowerByAction: "lager/setPowerByAction",
+    }),
+    ...mapGetters({
+      getLager: "lager/getLager",
+    }),
     ...mapMutations("lager", ["setPower"]),
     ...mapMutations("lager", ["setPlayer1"]),
     ...mapMutations("lager", ["setPlayer2"]),
